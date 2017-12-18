@@ -1,0 +1,258 @@
+\section{Iterative\-Solver Class Reference}
+\label{classIterativeSolver}\index{IterativeSolver@{IterativeSolver}}
+Iterative Solver.  
+
+
+{\tt \#include $<$Iterative\-Solver.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Iterative\-Solver} ()
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\bf{Iterative\-Solver} (\bf{Matrix} \&A, Vector \&b)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+virtual \bf{$\sim$Iterative\-Solver} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+void \bf{set\-Matrix\-A} (\bf{Matrix} \&A)
+\begin{CompactList}\small\item\em Set the system \doxyref{Matrix}{p.}{classMatrix}. \item\end{CompactList}\item 
+void \bf{set\-Vector\-B} (Vector \&b)
+\begin{CompactList}\small\item\em Set the right-hand side of the system. \item\end{CompactList}\item 
+Vector \bf{jacob} (Vector x\_\-0, int max\-Iteration, double tolerance)
+\begin{CompactList}\small\item\em Solve the system. \item\end{CompactList}\item 
+Vector \bf{jacob} (int max\-Iteration, double tolerance)
+\begin{CompactList}\small\item\em Solve the system. \item\end{CompactList}\item 
+Vector \bf{gauss\-Seidel} (Vector x\_\-0, int max\-Iteration, double tolerance)
+\begin{CompactList}\small\item\em Solve the system. \item\end{CompactList}\item 
+Vector \bf{gauss\-Seidel} (int max\-Iteration, double tolerance)
+\begin{CompactList}\small\item\em Solve the system. \item\end{CompactList}\item 
+Vector \bf{SOR} (Vector x\_\-0, int max\-Iteration, double tolerance, double omega)
+\begin{CompactList}\small\item\em Solve the system. \item\end{CompactList}\item 
+Vector \bf{SOR} (int max\-Iteration, double tolerance, double omega)
+\begin{CompactList}\small\item\em Solve the system. \item\end{CompactList}\item 
+Vector \bf{gradient\-Method} (Vector v\_\-0, int max\-Iteration, double tolerance)
+\begin{CompactList}\small\item\em Solve the system. \item\end{CompactList}\item 
+Vector \bf{gradient\-Method} (int max\-Iteration, double tolerance)
+\begin{CompactList}\small\item\em Solve the system. \item\end{CompactList}\item 
+Vector \bf{conjugated\-Gradient\-Method} (Vector v\_\-0, int max\-Iteration, double tolerance)
+\begin{CompactList}\small\item\em Solve the system. \item\end{CompactList}\item 
+Vector \bf{conjugated\-Gradient\-Method} (int max\-Iteration, double tolerance)
+\begin{CompactList}\small\item\em Solve the system. \item\end{CompactList}\item 
+void \bf{print\-System} ()
+\begin{CompactList}\small\item\em Print the system. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Iterative Solver. 
+
+Implements Iterative linear systems solvers. (Jacob, Gauss-Seidel, SOR, Gradient Method, Conjugated Gradient Method) 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{IterativeSolver@{Iterative\-Solver}!IterativeSolver@{IterativeSolver}}
+\index{IterativeSolver@{IterativeSolver}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Iterative\-Solver::Iterative\-Solver ()}\label{classIterativeSolver_1391a14bd0fce4116023e4d9ba0611fc}
+
+
+Constructor. 
+
+Construct a empty solver; \index{IterativeSolver@{Iterative\-Solver}!IterativeSolver@{IterativeSolver}}
+\index{IterativeSolver@{IterativeSolver}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Iterative\-Solver::Iterative\-Solver (\bf{Matrix} \& {\em A}, Vector \& {\em b})}\label{classIterativeSolver_b90027a1b7b1f04d4fe1d2adf79c6eb5}
+
+
+Constructor. 
+
+Construct a solver that solves the linear system Ax = b; \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em A}]a \doxyref{Matrix}{p.}{classMatrix} that represents the system. \item[{\em b}]the right-hand side of the system. \end{description}
+\end{Desc}
+\index{IterativeSolver@{Iterative\-Solver}!~IterativeSolver@{$\sim$IterativeSolver}}
+\index{~IterativeSolver@{$\sim$IterativeSolver}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Iterative\-Solver::$\sim$Iterative\-Solver ()\hspace{0.3cm}{\tt  [virtual]}}\label{classIterativeSolver_5ba62553bc34d15f399f67bff4285c25}
+
+
+Destructor. 
+
+Destroy the objects; 
+
+\subsection{Member Function Documentation}
+\index{IterativeSolver@{Iterative\-Solver}!conjugatedGradientMethod@{conjugatedGradientMethod}}
+\index{conjugatedGradientMethod@{conjugatedGradientMethod}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Vector Iterative\-Solver::conjugated\-Gradient\-Method (int {\em max\-Iteration}, double {\em tolerance})}\label{classIterativeSolver_7a39e6f19af196c9511fe997ce41db9a}
+
+
+Solve the system. 
+
+Solve the system using the Conjugated Gradient Method (Initial guess setted to 0) \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em max\-Iteration}]maximum number of iterations \item[{\em tolerance}]error tolerance \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the Vector containing the result \end{Desc}
+\index{IterativeSolver@{Iterative\-Solver}!conjugatedGradientMethod@{conjugatedGradientMethod}}
+\index{conjugatedGradientMethod@{conjugatedGradientMethod}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Vector Iterative\-Solver::conjugated\-Gradient\-Method (Vector {\em v\_\-0}, int {\em max\-Iteration}, double {\em tolerance})}\label{classIterativeSolver_63623c28d90c05e2d9f8bfccc2c7bfbb}
+
+
+Solve the system. 
+
+Solve the system using the Conjugated Gradient Method \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v\_\-0}]Initial guess \item[{\em max\-Iteration}]maximum number of iterations \item[{\em tolerance}]error tolerance \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the Vector containing the result \end{Desc}
+\index{IterativeSolver@{Iterative\-Solver}!gaussSeidel@{gaussSeidel}}
+\index{gaussSeidel@{gaussSeidel}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Vector Iterative\-Solver::gauss\-Seidel (int {\em max\-Iteration}, double {\em tolerance})}\label{classIterativeSolver_18473a18e083b1e565cdbc5758ae7712}
+
+
+Solve the system. 
+
+Solve the system using the Gauss-Seidel Method (Initial guess setted to 0) \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em max\-Iteration}]maximum number of iterations \item[{\em tolerance}]error tolerance \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the Vector containing the result \end{Desc}
+\index{IterativeSolver@{Iterative\-Solver}!gaussSeidel@{gaussSeidel}}
+\index{gaussSeidel@{gaussSeidel}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Vector Iterative\-Solver::gauss\-Seidel (Vector {\em x\_\-0}, int {\em max\-Iteration}, double {\em tolerance})}\label{classIterativeSolver_201b040755cbc8819c4a4663e671afbc}
+
+
+Solve the system. 
+
+Solve the system using the Gauss-Seidel Method \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\_\-0}]Initial guess \item[{\em max\-Iteration}]maximum number of iterations \item[{\em tolerance}]error tolerance \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the Vector containing the result \end{Desc}
+\index{IterativeSolver@{Iterative\-Solver}!gradientMethod@{gradientMethod}}
+\index{gradientMethod@{gradientMethod}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Vector Iterative\-Solver::gradient\-Method (int {\em max\-Iteration}, double {\em tolerance})}\label{classIterativeSolver_7164239cca92392ead7650980fb6494e}
+
+
+Solve the system. 
+
+Solve the system using the Gradient Method (Initial guess setted to 0) \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em max\-Iteration}]maximum number of iterations \item[{\em tolerance}]error tolerance \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the Vector containing the result \end{Desc}
+\index{IterativeSolver@{Iterative\-Solver}!gradientMethod@{gradientMethod}}
+\index{gradientMethod@{gradientMethod}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Vector Iterative\-Solver::gradient\-Method (Vector {\em v\_\-0}, int {\em max\-Iteration}, double {\em tolerance})}\label{classIterativeSolver_ed9824340b239caca06db562bcd84308}
+
+
+Solve the system. 
+
+Solve the system using the Gradient Method \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em v\_\-0}]Initial guess \item[{\em max\-Iteration}]maximum number of iterations \item[{\em tolerance}]error tolerance \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the Vector containing the result \end{Desc}
+\index{IterativeSolver@{Iterative\-Solver}!jacob@{jacob}}
+\index{jacob@{jacob}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Vector Iterative\-Solver::jacob (int {\em max\-Iteration}, double {\em tolerance})}\label{classIterativeSolver_77fc898aefcc6273e10d61d493dbe3ad}
+
+
+Solve the system. 
+
+Solve the system using the Jacob Method (Initial guess setted to 0) \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em max\-Iteration}]maximum number of iterations \item[{\em tolerance}]error tolerance \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the Vector containing the result \end{Desc}
+\index{IterativeSolver@{Iterative\-Solver}!jacob@{jacob}}
+\index{jacob@{jacob}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Vector Iterative\-Solver::jacob (Vector {\em x\_\-0}, int {\em max\-Iteration}, double {\em tolerance})}\label{classIterativeSolver_9b439df6df38cd84ea07cb08c1c289cb}
+
+
+Solve the system. 
+
+Solve the system using the Jacob Method \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\_\-0}]Initial guess \item[{\em max\-Iteration}]maximum number of iterations \item[{\em tolerance}]error tolerance \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the Vector containing the result \end{Desc}
+\index{IterativeSolver@{Iterative\-Solver}!printSystem@{printSystem}}
+\index{printSystem@{printSystem}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Iterative\-Solver::print\-System ()}\label{classIterativeSolver_ded6707dccfd230e5bb9ab46bfcfdf1f}
+
+
+Print the system. 
+
+Print a human readable linear system \index{IterativeSolver@{Iterative\-Solver}!setMatrixA@{setMatrixA}}
+\index{setMatrixA@{setMatrixA}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Iterative\-Solver::set\-Matrix\-A (\bf{Matrix} \& {\em A})}\label{classIterativeSolver_5a523a6639cd8faabd0a20a2bda9b3d7}
+
+
+Set the system \doxyref{Matrix}{p.}{classMatrix}. 
+
+Set the \doxyref{Matrix}{p.}{classMatrix} that will represent the system \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em A}]a \doxyref{Matrix}{p.}{classMatrix} that represents the system. \end{description}
+\end{Desc}
+\index{IterativeSolver@{Iterative\-Solver}!setVectorB@{setVectorB}}
+\index{setVectorB@{setVectorB}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Iterative\-Solver::set\-Vector\-B (Vector \& {\em b})}\label{classIterativeSolver_d6cb3a6ba70e06ed463af3a5d2234081}
+
+
+Set the right-hand side of the system. 
+
+Set the Vector that will represents right-hand side of the system. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em b}]the right-hand side of the system. \end{description}
+\end{Desc}
+\index{IterativeSolver@{Iterative\-Solver}!SOR@{SOR}}
+\index{SOR@{SOR}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Vector Iterative\-Solver::SOR (int {\em max\-Iteration}, double {\em tolerance}, double {\em omega})}\label{classIterativeSolver_bf4a66aebe8792a8f5a99cd06e084c8a}
+
+
+Solve the system. 
+
+Solve the system using the SOR Method (Initial guess setted to 0) \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em max\-Iteration}]maximum number of iterations \item[{\em tolerance}]error tolerance \item[{\em omega}]SOR omega parameter \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the Vector containing the result \end{Desc}
+\index{IterativeSolver@{Iterative\-Solver}!SOR@{SOR}}
+\index{SOR@{SOR}!IterativeSolver@{Iterative\-Solver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Vector Iterative\-Solver::SOR (Vector {\em x\_\-0}, int {\em max\-Iteration}, double {\em tolerance}, double {\em omega})}\label{classIterativeSolver_5ce9397043316df658c35a7502b8997a}
+
+
+Solve the system. 
+
+Solve the system using the SOR Method \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\_\-0}]Initial guess \item[{\em max\-Iteration}]maximum number of iterations \item[{\em tolerance}]error tolerance \item[{\em omega}]SOR omega parameter \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the Vector containing the result \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+/home/rafael/workspace/Matrix/src/Iterative\-Solver.h\item 
+/home/rafael/workspace/Matrix/src/Iterative\-Solver.cpp\end{CompactItemize}
