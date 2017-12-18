@@ -31,9 +31,7 @@ DirectSolver::DirectSolver(Matrix &A, Vector &b) {
 
 }
 
-DirectSolver::~DirectSolver() {
-	
-}
+DirectSolver::~DirectSolver() = default;
 
 void DirectSolver::setMatrixA(Matrix &A) {
 
@@ -501,26 +499,26 @@ Vector DirectSolver::refinedLUpivotGauss(int maxIterarions, double tolerance) {
 	
 		res = b-A_orig*x;
 		
-		for(int i = 0; i <=n; i++) {
+		for(int j = 0; j <=n; j++) {
 			
-			aux2 = (int)p[i];
-			c[i] = res[aux2];
+			aux2 = (int)p[j];
+			c[j] = res[aux2];
 		
 		}
 		
 		y[0] = c[0];
 		
-		for(int i = 1; i <= n; i++) {
+		for(int j = 1; j <= n; j++) {
 			s = 0;
-			for(int k = 0; k <= (i-1); k++) {
-				if(i==k) {
+			for(int k = 0; k <= (j-1); k++) {
+				if(j==k) {
 					aux = 1;
 				}
 				else {
-					aux = A(i,k);
+					aux = A(j,k);
 				}
 				s = s + aux * y[k];
-				y[i] = c[i] - s;		
+				y[j] = c[j] - s;
 			}		
 		
 		}
@@ -654,7 +652,7 @@ Vector DirectSolver::choleskyFactorization() {
 void DirectSolver::printSystem() {
 
 	if(A.isNull() || b.isNull()) {	
-		cout << "Error printSystem()!! Verify o matrix A and vector b!!" << endl;	
+		cout << "Error printSystem()!! Verify matrix A and vector b!!" << endl;
 		return;
 	}
 

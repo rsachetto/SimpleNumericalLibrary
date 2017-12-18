@@ -6,4 +6,4 @@ A simple matrix and vector library. It contain basic matrix and vector operation
 
 cd Release/
 
-make clean; make;
+cmake . ; make
